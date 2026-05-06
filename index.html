@@ -3,25 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Cafe Knuth in Ottensen: Frühstück, Kuchen, Lunch, hausgemachte Limonaden, Kaffee, Cocktails und Wein des Monats. Große Rainstraße 21, 22765 Hamburg."
+    />
+    <link rel="canonical" href="https://cafeknuth.de/" />
+    <meta name="robots" content="index,follow" />
+    <meta property="og:title" content="Cafe Knuth · Frühstück, Kuchen, Drinks" />
+    <meta
+      property="og:description"
+      content="Genieße Frühstück, Kuchen, Lunch, Kaffee, Limonaden, Cocktails und Wein im Cafe Knuth in Ottensen."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://cafeknuth.de/" />
+    <meta property="og:site_name" content="Cafe Knuth" />
+    <meta property="og:locale" content="de_DE" />
+    <meta
+      property="og:image"
+      content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cafe Knuth · Frühstück, Kuchen, Drinks" />
+    <meta
+      name="twitter:description"
+      content="Hausgemachte Kuchen, Frühstück &amp; Lunch, Kaffee, Limonaden, Cocktails und Wein in Hamburg-Ottensen."
+    />
+    <meta
+      name="twitter:image"
+      content="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+    />
     <title>Cafe Knuth</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Manrope:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Manrope:wght@400;500;600&amp;display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/knuth_logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/knuth_logo.png" />
+    <link rel="apple-touch-icon" href="./images/knuth_logo.png" />
+    <link rel="shortcut icon" href="./images/knuth_logo.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
+      imagesrcset="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80 900w, https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w"
+      imagesizes="(max-width: 900px) 100vw, 50vw"
+    />
     <link rel="stylesheet" href="./style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CafeOrCoffeeShop",
+        "name": "Cafe Knuth",
+        "image": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1200&q=80",
+        "url": "https://cafeknuth.de/",
+        "telephone": "+49 40 46008708",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Große Rainstraße 21",
+          "addressLocality": "Hamburg",
+          "postalCode": "22765",
+          "addressCountry": "DE"
+        },
+        "openingHoursSpecification": [
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday"], "opens": "09:00", "closes": "00:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday", "Saturday"], "opens": "09:00", "closes": "02:00" },
+          { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "20:00" }
+        ],
+        "sameAs": [
+          "https://www.instagram.com/cafeknuth/?hl=de",
+          "https://www.tiktok.com/@cafeknuth",
+          "https://das-knuth.myshopify.com"
+        ],
+        "servesCuisine": ["Café", "Frühstück", "Hausgemacht", "Barista Kaffee"],
+        "menu": "https://cafeknuth.de/#speisekarte"
+      }
+    </script>
   </head>
   <body>
+    <a class="skip-link" href="#startseite">Zum Inhalt springen</a>
     <header class="top-nav">
-      <div class="logo">
+      <a class="logo" href="#startseite" aria-label="Zur Startseite von Cafe Knuth">
         <img src="./images/knuth_logo.png" alt="Cafe Knuth Logo" class="logo-img" />
         <span>Cafe Knuth</span>
-      </div>
-      <nav>
+      </a>
+      <nav aria-label="Hauptnavigation">
         <a href="#startseite">Startseite</a>
         <a href="#speisekarte">Speisekarte</a>
-        <a href="#uber-uns">Über uns</a>
         <a href="#bewerben">Bewerben</a>
         <a href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Webshop</a>
       </nav>
@@ -32,7 +102,7 @@
       <section id="startseite" class="hero">
         <div class="hero-text">
           <p class="eyebrow">Im Herzen von Ottensen</p>
-          <h1>Frühstück, Kuchen, Drinks und goldene Momente im Cafe Knuth.</h1>
+          <h1>Frühstück, Kaffee, Kuchen und Cocktails im Cafe Knuth.</h1>
           <p class="lead">
             Hausgemachte Kuchen, Frühstück &amp; Lunch, frische Limonaden, feine Cocktails
             und ein Wein des Monats. Komm vorbei für einen schnellen Espresso oder
@@ -40,21 +110,23 @@
           </p>
           <div class="hero-actions">
             <a class="btn primary" href="#speisekarte">Speisekarte ansehen</a>
-            <a class="btn ghost" href="#uber-uns">Mehr über uns</a>
+            <a class="btn ghost" href="https://maps.google.com/?q=Gro%C3%9Fe+Rainstra%C3%9Fe+21+22765+Hamburg" target="_blank" rel="noopener">Route planen</a>
           </div>
         </div>
         <div class="hero-media">
           <div class="feature-stack">
             <div class="feature-photo main">
               <img
-                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80"
+                src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
                 alt="Gemütliche Café-Szene mit Frühstück"
+                loading="eager"
               />
             </div>
             <div class="feature-photo accent">
               <img
-                src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&fit=crop&w=700&q=80"
+                src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
                 alt="Goldbrauner Kuchen auf einem Teller"
+                loading="lazy"
               />
             </div>
             <div class="feature-card">
@@ -76,476 +148,64 @@
             abends Limo, Cocktail oder ein Glas vom Wein des Monats.
           </p>
         </div>
-        <div class="card-grid menu-grid">
-          <a class="card card-link" href="#essen">
+        <a class="menu-feature-card" href="./speisekarte/2025%20Knuth%20Karte%20.pdf" target="_blank" rel="noopener">
+          <div class="menu-feature-photo" aria-hidden="true">
             <img
-              src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=700&q=80"
-              alt="Frühstückstisch mit Croissants und Kaffee"
+              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&amp;fit=crop&amp;w=520&amp;q=80"
+              alt=""
+              loading="lazy"
             />
-            <div class="card-body">
-              <h3>Essen</h3>
-              <p>Frühstück, Gegrillte Happen, Salate und Süßes.</p>
-              <span class="price">ab 1,20 €</span>
-            </div>
-          </a>
-          <a class="card card-link" href="#trinken">
-            <img
-              src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=700&q=80"
-              alt="Cappuccino mit Latte Art"
-            />
-            <div class="card-body">
-              <h3>Trinken</h3>
-              <p>Kaffee &amp; Tee, Softdrinks, Spritz, Longdrinks und Weine.</p>
-              <span class="price">ab 2,50 €</span>
-            </div>
-          </a>
-          <a class="card card-link" href="#sweets">
-            <img
-              src="https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=700&q=80"
-              alt="Ein Stück Käsekuchen mit Himbeeren"
-            />
-            <div class="card-body">
-              <h3>Hausgemachte Kuchen</h3>
-              <p>Milchreis, Bowls und süße Kleinigkeiten – täglich frisch.</p>
-              <span class="price">ab 5,80 €</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="menu-sections" id="essen">
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Essen</p>
-              <h3 class="menu-section-title">Frühstück &amp; Herzhaft</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Frühstück</h4>
-                <ul class="menu-items">
-                  <li class="menu-item">
-                    <div class="item-row">
-                      <span class="item-name">Knuth's Frühstück</span>
-                      <span class="item-price">13,80 €</span>
-                    </div>
-                    <p class="item-desc">Brötchen, Vollkornbrot, Aufschnitt, Käseauswahl &amp; hausgemachte Konfitüre.</p>
-                  </li>
-                  <li class="menu-item">
-                    <div class="item-row">
-                      <span class="item-name">Käse Frühstück</span>
-                      <span class="item-price">13,80 €</span>
-                    </div>
-                    <p class="item-desc">Brötchen, Vollkornbrot, Käseauswahl, Frischkäse &amp; hausgemachte Konfitüre.</p>
-                  </li>
-                  <li class="menu-item">
-                    <div class="item-row">
-                      <span class="item-name">Veganes Frühstück</span>
-                      <span class="item-price">14,80 €</span>
-                    </div>
-                    <p class="item-desc">Brötchen, Vollkornbrot, Tofuaufschnitt, veganer Aufstrich, vegane Wurst &amp; hausgemachte Konfitüre.</p>
-                  </li>
-                  <li class="menu-item">
-                    <div class="item-row">
-                      <span class="item-name">Großes Frühstück</span>
-                      <span class="item-price">18,90 €</span>
-                    </div>
-                    <p class="item-desc">Croissant, 2 Brötchen, Aufschnitt, Käseauswahl, hausgemachte Konfitüre &amp; Frischkäse.</p>
-                  </li>
-                  <li class="menu-item">
-                    <div class="item-row">
-                      <span class="item-name">Großes Veggie Frühstück</span>
-                      <span class="item-price">19,80 €</span>
-                    </div>
-                    <p class="item-desc">Croissant, 2 Brötchen, Käseauswahl, veganer Aufstrich, vegane Wurst, hausgemachte Konfitüre &amp; Frischkäse.</p>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Extras &amp; Aufstriche</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Helles Brötchen, Butter</span><span class="item-price">1,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Glutenfreies Brötchen, Butter</span><span class="item-price">2,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Mehrkornbrötchen, Butter</span><span class="item-price">2,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vollkornbrot, Butter</span><span class="item-price">1,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Croissant, Butter</span><span class="item-price">3,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Croissant mit hausgemachter Konfitüre</span><span class="item-price">4,70 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Franzbrötchen, Butter</span><span class="item-price">3,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachte Konfitüre</span><span class="item-price">1,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Honig oder Nutella</span><span class="item-price">1,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Frischkäse</span><span class="item-price">2,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Veganer Aufstrich</span><span class="item-price">2,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Gekochtes Ei</span><span class="item-price">2,40 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rührei (von glücklichen Hühnern)</span><span class="item-price">5,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Spiegeleier (von glücklichen Hühnern)</span><span class="item-price">5,10 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">+ Speck</span><span class="item-price">2,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">+ Kirschtomaten</span><span class="item-price">2,00 €</span></div></li>
-                </ul>
-              </div>
+          </div>
+          <div class="menu-feature-body">
+            <span class="eyebrow">PDF-Speisekarte</span>
+            <h3>Knuth Karte</h3>
+            <p>Unsere komplette Karte als PDF: Frühstück, Kaffee, Kuchen, Drinks und Cocktails.</p>
+            <div class="menu-feature-tags" aria-hidden="true">
+              <span>Frühstück</span>
+              <span>Kaffee</span>
+              <span>Kuchen</span>
+              <span>Cocktails</span>
             </div>
           </div>
-
-          <div class="menu-section" id="sweets">
-            <div class="menu-section-head">
-              <p class="eyebrow">Essen</p>
-              <h3 class="menu-section-title">Bowls, Müsli &amp; Süßes</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Müsli &amp; Bowls</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachtes karamellisiertes Knuspermüsli</span><span class="item-price">4,80 €</span></div><p class="item-desc">Mit frischer Milch oder laktosefreier Milch (+0,00 €), auf Wunsch Haferdrink (+0,30 €).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Jonas Frühstücksbowl</span><span class="item-price">11,80 €</span></div><p class="item-desc">Mit Joghurt / Sojajoghurt, hausgemachtem karamellisierten Knuspermüsli, frischen Früchten &amp; hausgemachter Konfitüre.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachter Quark &amp; Früchte</span><span class="item-price">7,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachter Quark mit Knuspermüsli</span><span class="item-price">8,80 €</span></div><p class="item-desc">Mit hausgemachtem karamellisiertem Knuspermüsli &amp; frischen Früchten.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachtes Bircher Müsli</span><span class="item-price">6,80 €</span></div></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Süßes</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Milchreis mit Zimt &amp; Zucker</span><span class="item-price">5,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Milchreis mit Kirschkompott</span><span class="item-price">6,80 €</span></div></li>
-                </ul>
-                <h4>Kleinigkeiten</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Brot &amp; Oliven (klein)</span><span class="item-price">7,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Brot &amp; Oliven (groß)</span><span class="item-price">10,80 €</span></div></li>
-                </ul>
-              </div>
-            </div>
+          <div class="menu-feature-action" aria-hidden="true">
+            <span>Speisekarte öffnen</span>
           </div>
-
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Essen</p>
-              <h3 class="menu-section-title">Gegrillte Happen &amp; Salate</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Gegrillte Happen</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ciabatta</span><span class="item-price">12,50 €</span></div><p class="item-desc">Strauchtomate, Mozzarella, Basilikum &amp; Hausdressing.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Panino "St. David"</span><span class="item-price">13,50 €</span></div><p class="item-desc">Parmaschinken, Mozzarella, Strauchtomate &amp; hausgemachtes Pesto.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vinschgauer</span><span class="item-price">13,50 €</span></div><p class="item-desc">Brie, Wacholderschinken, hausgemachte Preiselbeermayonnaise &amp; Rucola.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Landbrot "Ziege"</span><span class="item-price">14,50 €</span></div><p class="item-desc">Ziegenfrischkäse, Datteln &amp; Rucola.</p></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Salate</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Salat "Ziege"</span><span class="item-price">16,50 €</span></div><p class="item-desc">Gemischter Blattsalat, Hausdressing, gratinierter Ziegenkäse.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Salat "Maultaschen"</span><span class="item-price">15,50 €</span></div><p class="item-desc">Gemischter Blattsalat, Hausdressing, vegane gegrillte Maultaschen.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Salat "Feta &amp; Olive"</span><span class="item-price">16,50 €</span></div><p class="item-desc">Gemischter Blattsalat, Hausdressing, Schafskäse &amp; Kalamata Oliven.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Caesar's Salad</span><span class="item-price">14,50 €</span></div><p class="item-desc">Römersalat, Caesar-Dressing, Kirschtomaten, Parmesan &amp; Croûtons.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Caesar's Chicken Salad</span><span class="item-price">17,50 €</span></div><p class="item-desc">Römersalat, Caesar-Dressing, Kirschtomaten, gegrilltes Chicken, Parmesan &amp; Croûtons.</p></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="menu-sections" id="trinken">
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Trinken</p>
-              <h3 class="menu-section-title">Café &amp; Tee</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Café</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Espresso / Espresso Macchiato</span><span class="item-price">2,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Doppio / Doppio Macchiato</span><span class="item-price">3,40 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Cappuccino</span><span class="item-price">3,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Großer Cappuccino</span><span class="item-price">4,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Flat White</span><span class="item-price">4,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Latte Macchiato</span><span class="item-price">4,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Schale Milchkaffee</span><span class="item-price">4,60 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Café Creme</span><span class="item-price">3,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Americano</span><span class="item-price">3,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Becher Kaffee</span><span class="item-price">3,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Espresso extra</span><span class="item-price">0,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Entkoffeinierter Espresso</span><span class="item-price">0,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Sojamilch / laktosefreie Milch</span><span class="item-price">0,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hafer Drink</span><span class="item-price">0,30 €</span></div></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Tee</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ayurvedischer Coming Down Tee</span><span class="item-price">3,90 €</span></div><p class="item-desc">Orangenschale, Fenchel, Zimt, Hagebuttenschale, Nelken, Kardamom, Ingwer.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Darjeeling / Earl Grey / Formosa Oolong</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Japan Sencha Lime</span><span class="item-price">3,90 €</span></div><p class="item-desc">Grüner Tee mit Limetten und Gänseblümchen.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Sencha</span><span class="item-price">3,90 €</span></div><p class="item-desc">Unbehandelter grüner Tee, mild, weich im Aroma.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Temple of Heaven</span><span class="item-price">3,90 €</span></div><p class="item-desc">Grüner Tee, Kugelform, feines Jasmin-Aroma.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Kamillentee / Rosa Früchtetee</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Frischer Minztee</span><span class="item-price">4,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Griechischer Bergtee</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rooibos Vanille / Blütentee</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Frischer Ingwertee</span><span class="item-price">4,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Frischer Ingwer-Minz-Tee</span><span class="item-price">4,60 €</span></div></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Trinken</p>
-              <h3 class="menu-section-title">Softdrinks &amp; Heißes</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Heiß + Süß</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Matcha Latte</span><span class="item-price">4,60 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Chai Latte</span><span class="item-price">4,60 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Schokolade</span><span class="item-price">4,60 €</span></div></li>
-                </ul>
-                <h4>Softdrinks</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Viva con Agua (still/prickelnd) 0,33l</span><span class="item-price">3,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Viva con Agua (still/prickelnd) 0,75l</span><span class="item-price">6,40 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Lemonaid Limette 0,33l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Charitea Mate 0,33l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Fritz Kola / Zuckerfrei 0,2l</span><span class="item-price">3,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Fritz-Limo 0,2l</span><span class="item-price">3,20 €</span></div><p class="item-desc">Orange, Zitrone, Mischmasch.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Thomas Henry 0,2l</span><span class="item-price">3,50 €</span></div><p class="item-desc">Bitter Lemon, Spicy Ginger, Tonic Water.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Schweppes 0,2l</span><span class="item-price">3,50 €</span></div><p class="item-desc">Ginger Ale, Wild Berry.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachte Limonade 0,3l</span><span class="item-price">3,90 €</span></div><p class="item-desc">Himbeer-Minze-Limette, Zitronengras-Ingwer-Basilikum.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Hausgemachte Limonade 0,5l</span><span class="item-price">4,90 €</span></div></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Säfte &amp; Schorlen</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Frischer Orangensaft 0,2l</span><span class="item-price">4,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Säfte 0,25l</span><span class="item-price">2,90 €</span></div><p class="item-desc">Banane, Cranberry, Johannisbeere, Kirsche, Mango, Maracuja, Orange, Pfirsich, Traube.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Saft-Schorle klein 0,3l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Saft-Schorle groß 0,5l</span><span class="item-price">4,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Apfel-Schorle (Mosterei Möckel) 0,3l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Apfel-Schorle (Mosterei Möckel) 0,5l</span><span class="item-price">4,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rhabarber-Schorle 0,3l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rhabarber-Schorle 0,5l</span><span class="item-price">4,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Holunderblütenlimonade 0,3l</span><span class="item-price">3,90 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Holunderblütenlimonade 0,5l</span><span class="item-price">4,90 €</span></div></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Trinken</p>
-              <h3 class="menu-section-title">Bier, Cider &amp; Spritz</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Biere vom Fass</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Jever Pilsener klein 0,3l</span><span class="item-price">4,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Jever Pilsener groß 0,5l</span><span class="item-price">5,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Bübble Hell klein 0,3l</span><span class="item-price">4,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Bübble Hell groß 0,5l</span><span class="item-price">5,40 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ratsherrn Zwickel klein 0,3l</span><span class="item-price">4,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ratsherrn Zwickel groß 0,5l</span><span class="item-price">5,40 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Alster klein 0,3l</span><span class="item-price">3,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Alster groß 0,5l</span><span class="item-price">4,80 €</span></div></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Flaschenbiere &amp; Cider</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ratsherrn Pilsener 0,33l</span><span class="item-price">3,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Jever Fun 0,33l</span><span class="item-price">3,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Maisel's Weisse 0,5l</span><span class="item-price">5,10 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Maisel's Weisse alkoholfrei 0,5l</span><span class="item-price">5,10 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Somersby Apple 0,33l</span><span class="item-price">4,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Somersby Blackberry 0,33l</span><span class="item-price">4,50 €</span></div></li>
-                </ul>
-                <h4>Spritz</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Aperol / Campari Spritz (0,2l)</span><span class="item-price">7,80 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rhabarber / Holunder Spritz (0,2l)</span><span class="item-price">7,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Wildberry Lillet (0,2l)</span><span class="item-price">7,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Alkoholfreier Holunder Spritz (0,2l)</span><span class="item-price">6,20 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Alkoholfreier Rhabarber Spritz (0,2l)</span><span class="item-price">6,20 €</span></div></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-section">
-            <div class="menu-section-head">
-              <p class="eyebrow">Trinken</p>
-              <h3 class="menu-section-title">Gin, Longdrinks &amp; Spirits</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Gin Tonic</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Tanqueray</span><span class="item-price">9,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Monkey 47</span><span class="item-price">10,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Gin Sul</span><span class="item-price">11,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">mit Thomas Henry Tonic Water</span><span class="item-price">0,00 €</span></div></li>
-                </ul>
-                <h4>Longdrinks</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Knuthzen</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Moskow Mule</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Espresso Martini</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Pornstar Martini</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Gin Basil Smash</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Whiskey Sour</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Pisco Sour</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Aperol Sour</span><span class="item-price">8,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vodka Soda</span><span class="item-price">8,00 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vodka Lemon</span><span class="item-price">8,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vodka Mate</span><span class="item-price">8,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Disco Schorle</span><span class="item-price">9,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Cuba Libre</span><span class="item-price">9,50 €</span></div></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Spirits</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Pastis Henri Bardouin</span><span class="item-price">5,90 €</span></div><p class="item-desc">4 cl.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Whiskey + Malt</span><span class="item-price">ab 5,90 €</span></div><p class="item-desc">Maker's Mark 5,90 € (4 cl) · Talisker 10 Jahre 9,50 € (4 cl).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Rum</span><span class="item-price">ab 6,50 €</span></div><p class="item-desc">Zacapa 15 (4 cl) 7,50 € · The Kraken Black Spiced (4 cl) 6,50 €.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Brandies + Grappa</span><span class="item-price">ab 4,40 €</span></div><p class="item-desc">Bobadilla 103 5,90 € · Carlos 1 7,10 € · Nonino Grappa lo Chardonnay 4,40 €.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Cognac</span><span class="item-price">7,50 €</span></div><p class="item-desc">Hennessy V.S. (4 cl).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Obstbrand</span><span class="item-price">6,50 €</span></div><p class="item-desc">Walcher Williams Birnen Brand (2 cl).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vodka</span><span class="item-price">5,80 €</span></div><p class="item-desc">Absolut (4 cl) · Grasovka (4 cl).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Bitter + Liköre</span><span class="item-price">5,20 €</span></div><p class="item-desc">Amaretto, Ramazotti, Baileys, Campari, Sambuca (4 cl).</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Shots</span><span class="item-price">ab 3,30 €</span></div><p class="item-desc">Tarifa, Apfelstrudel, Sambuca, Sambuca Caffee, Frangelico, Helbing Kümmel, Absolut Vodka, Berliner Luft, Tequilla.</p></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="menu-section" id="wein">
-            <div class="menu-section-head">
-              <p class="eyebrow">Trinken</p>
-              <h3 class="menu-section-title">Weinkarte</h3>
-            </div>
-            <div class="menu-columns two">
-              <div class="menu-block">
-                <h4>Weiß</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Weinschorle</span><span class="item-price">0,2l 5,50 €</span></div></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Oveja Blanca (dry Muscat) 2023</span><span class="item-price">0,15l 5,80 € / 0,75l 26,00 €</span></div><p class="item-desc">Spanien, vino natural, bio.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Grauer Burgunder 2023</span><span class="item-price">0,15l 6,20 € / 0,75l 28,00 €</span></div><p class="item-desc">Weingut Borell-Diehl, Pfalz.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Merlot Blanc de Noir 2023</span><span class="item-price">0,15l 6,80 € / 0,75l 31,00 €</span></div><p class="item-desc">Weingut Schittler-Becker, Rheinhessen.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Muskateller 2023</span><span class="item-price">0,15l 7,20 € / 0,75l 33,00 €</span></div><p class="item-desc">Weingut Schittler-Becker, Rheinhessen.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Riesling Hochgewächs 2023</span><span class="item-price">0,15l 7,20 € / 0,75l 33,00 €</span></div><p class="item-desc">Weingut Kalfez, Mosel.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Welschriesling 2021</span><span class="item-price">0,15l 7,60 € / 0,75l 35,00 €</span></div><p class="item-desc">Weingut Welch, Burgenland.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Mathilda Pet Nat 2021</span><span class="item-price">0,75l 39,00 €</span></div><p class="item-desc">Riesling, Silvaner, Kerner; Deutschland, Nahe.</p></li>
-                </ul>
-              </div>
-              <div class="menu-block">
-                <h4>Rosé</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Siener Rosé 2023</span><span class="item-price">0,15l 5,60 € / 1,0l 28,00 €</span></div><p class="item-desc">Portugieser, Dornfelder, Schwarzriesling; Pfalz.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Vinho Verde 2023</span><span class="item-price">0,15l 6,20 € / 0,75l 28,00 €</span></div><p class="item-desc">Casa de Ventoleza Espadeiro, Portugal.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Artistz 2023</span><span class="item-price">0,75l 39,00 €</span></div><p class="item-desc">Weingut Liszt, Scheurebe, Blaufränkisch, Cabernet Franc; Österreich.</p></li>
-                </ul>
-                <h4>Rot</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ventoux A.O.C. Rouge 2023</span><span class="item-price">0,15l 5,80 € / 0,75l 26,00 €</span></div><p class="item-desc">Grenache, Syrah, Carignan, Cinsault; Frankreich, Rhône.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Ragazzo No. 1 2022</span><span class="item-price">0,15l 6,60 € / 0,75l 30,00 €</span></div><p class="item-desc">Primitivo; Italien, Apulien.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Crianza 2021</span><span class="item-price">0,15l 7,20 € / 0,75l 33,00 €</span></div><p class="item-desc">95% Tempranillo, 5% Cabernet Sauvignon; Spanien, Ribera del Guadiana.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Madiran Chateau Vielle 2018</span><span class="item-price">0,15l 7,20 € / 0,75l 33,00 €</span></div><p class="item-desc">Cabernet Franc, Tannat; Frankreich, Madiran.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Blaufränkisch 2020</span><span class="item-price">0,15l 7,70 € / 0,75l 35,00 €</span></div><p class="item-desc">(Demeter) Österreich, Burgenland.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Sinestèsia 2023</span><span class="item-price">0,75l 39,00 €</span></div><p class="item-desc">Pinyolers Vinyaters, Grenache; Spanien, Katalonien.</p></li>
-                </ul>
-              </div>
-            </div>
-            <div class="menu-columns one">
-              <div class="menu-block">
-                <h4>Schaumweine</h4>
-                <ul class="menu-items">
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Sekt "Kulm" Schloss Affaltrach</span><span class="item-price">0,1l 4,80 € / 0,75l 29,00 €</span></div><p class="item-desc">Deutschland, Württemberg.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Pet Nat Glücksbrause</span><span class="item-price">0,75l 41,00 €</span></div><p class="item-desc">Pinot Noir Rosé, Deutschland, Pfalz.</p></li>
-                  <li class="menu-item"><div class="item-row"><span class="item-name">Sekt auf Eis</span><span class="item-price">0,2l 7,80 €</span></div></li>
-                </ul>
-                <p class="menu-note">Weine des Monats findest du auf der Tafel am Tresen – frag gern unser Servicepersonal.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        </a>
       </section>
 
-      <section id="uber-uns" class="section about">
-        <div class="content about-grid">
-          <div class="about-text">
-            <p class="eyebrow">Über uns</p>
-            <h2>Nachbarschaftscafé mit Herz</h2>
-            <p class="section-desc">
-              Wir rösten unsere Bohnen schonend, backen täglich frisch und glauben
-              daran, dass ein Café vor allem ein Zuhause auf Zeit sein soll.
-            </p>
-            <div class="pill-list">
-              <span class="pill">Regionale Zutaten</span>
-              <span class="pill">Zero-Waste-Ansatz</span>
-              <span class="pill">Vegane Optionen</span>
-              <span class="pill">Fair gehandelt</span>
+      <section class="section about">
+        <div class="content action-grid">
+          <article id="bewerben" class="careers-card">
+            <div>
+              <p class="eyebrow">Bewerben</p>
+              <h2>Wir suchen Verstärkung</h2>
+              <p class="section-desc">
+                Du hast Freude an gutem Kaffee, Kuchen und Gastgebersein? Schreib uns kurz.
+              </p>
             </div>
-          </div>
-          <div class="about-side">
-            <article class="shop-cta-card">
-              <img
-                src="https://images.unsplash.com/photo-1459257868276-5e65389e2722?auto=format&fit=crop&w=1200&q=80"
-                alt="Gemütliches Café-Interior mit Kaffeebar"
-              />
-              <div class="card-body">
-                <p class="eyebrow">Zu Hause genießen</p>
-                <h3>Knuth Kaffee &amp; Merch</h3>
-                <p>Unsere Bohnen, Limos und ein bisschen Knuth für daheim – direkt im Webshop.</p>
-                <a class="btn primary" href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Zum Webshop</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="bewerben" class="section careers">
-        <div class="section-header">
-          <p class="eyebrow">Bewerben</p>
-          <h2>Werde Teil des Teams</h2>
-          <p class="section-desc">
-            Wir suchen Menschen mit Liebe zu gutem Kaffee und Freude am
-            Gastgebersein. Flexible Zeiten, faire Bezahlung und ein herzliches Team.
-          </p>
-        </div>
-        <div class="card-grid compact">
-          <article class="card accent">
-            <div class="card-body">
-              <h3>Barista (m/w/d)</h3>
-              <p>Du hast Erfahrung mit Siebträgern und Latte Art oder möchtest es lernen.</p>
-              <span class="pill">Teilzeit</span>
-              <span class="pill">Wochenenden</span>
+            <div class="pill-list compact" aria-label="Gesuchte Bereiche">
+              <span class="pill">Bar</span>
+              <span class="pill">Service</span>
+              <span class="pill">Küche</span>
+            </div>
+            <div class="careers-cta">
+              <p><a href="mailto:hallo@cafeknuth.de">hallo@cafeknuth.de</a></p>
+              <a class="btn primary" href="mailto:hallo@cafeknuth.de?subject=Bewerbung%20Cafe%20Knuth">Jetzt bewerben</a>
             </div>
           </article>
-          <article class="card accent">
+          <article class="shop-cta-card">
+            <img
+              src="https://images.unsplash.com/photo-1459257868276-5e65389e2722?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
+              alt="Gemütliches Café-Interior mit Kaffeebar"
+              loading="lazy"
+            />
             <div class="card-body">
-              <h3>Service (m/w/d)</h3>
-              <p>Du begrüßt Gäste mit einem Lächeln und behältst auch im Trubel Ruhe.</p>
-              <span class="pill">Vormittags</span>
-              <span class="pill">Student:innen</span>
+              <p class="eyebrow">Zu Hause genießen</p>
+              <h2>Knuth Kaffee &amp; Merch</h2>
+              <p>Unsere Bohnen und ein bisschen Knuth für daheim – direkt im Webshop.</p>
+              <a class="btn primary" href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Zum Webshop</a>
             </div>
           </article>
-          <article class="card accent">
-            <div class="card-body">
-              <h3>Backstube (m/w/d)</h3>
-              <p>Du liebst Teige, Toppings und möchtest unsere Kuchen mitgestalten.</p>
-              <span class="pill">Frühmorgens</span>
-              <span class="pill">Teilzeit</span>
-            </div>
-          </article>
-        </div>
-        <div class="careers-cta">
-          <p>Kurze Mail genügt: <a href="mailto:hallo@cafeknuth.de">hallo@cafeknuth.de</a></p>
-          <a class="btn primary" href="mailto:hallo@cafeknuth.de?subject=Bewerbung%20Cafe%20Knuth">Jetzt bewerben</a>
         </div>
       </section>
 
@@ -572,8 +232,6 @@
             <h3>Cafe Knuth</h3>
             <div class="visit-details">
               <div class="visit-block">
-                <p class="hours-title">Adresse</p>
-                <p class="section-desc">Große Rainstraße 21<br />22765 Hamburg</p>
                 <p class="hours-title">Öffnungszeiten</p>
                 <ul class="visit-times">
                   <li>Mo–Do 9:00–00:00</li>
@@ -583,7 +241,7 @@
               </div>
               <div class="visit-block contact">
                 <p class="hours-title">Reservierungen &amp; Anfragen</p>
-                <a href="tel:+494012345678">+49 40 123 456 78</a>
+                <a href="tel:+494046008708">040 46008708</a>
                 <a href="mailto:hallo@cafeknuth.de">hallo@cafeknuth.de</a>
                 <div class="visit-socials">
                   <a href="https://www.instagram.com/cafeknuth/?hl=de" target="_blank" rel="noopener" aria-label="Instagram">
@@ -602,8 +260,6 @@
           </div>
         </div>
       </section>
-
-    
     </main>
 
     <footer class="footer">
@@ -614,9 +270,6 @@
         <a href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Shop</a>
       </div>
     </footer>
-
-      <script src="main.js" defer></script>
-
   </body>
 </html>
 

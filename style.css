@@ -88,7 +88,7 @@ img {
   z-index: 50;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 18px 7vw;
   backdrop-filter: blur(12px);
   background: rgba(12, 31, 27, 0.75);
@@ -117,6 +117,9 @@ img {
   display: flex;
   gap: 18px;
   font-size: 0.98rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .top-nav nav a {
@@ -146,19 +149,49 @@ img {
   transform: scaleX(1);
 }
 
-.cta {
-  padding: 10px 16px;
-  border: 1px solid var(--gold);
+.open-status {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 116px;
+  min-height: 40px;
+  padding: 9px 15px;
+  border: 1px solid rgba(200, 163, 84, 0.5);
   border-radius: 999px;
   color: var(--gold);
-  font-weight: 600;
-  transition: background 180ms ease, color 180ms ease, transform 180ms ease;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
-.cta:hover {
-  background: var(--gold);
-  color: var(--deep-green);
+.open-status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-right: 8px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 0 4px rgba(200, 163, 84, 0.12);
+}
+
+.open-status.is-open {
+  border-color: rgba(132, 201, 143, 0.7);
+  color: #a6e0a8;
+  background: rgba(132, 201, 143, 0.1);
+}
+
+.open-status.is-closed {
+  background: rgba(200, 163, 84, 0.08);
+}
+
+.open-status:hover {
   transform: translateY(-2px);
+  border-color: var(--gold);
+  background: rgba(200, 163, 84, 0.16);
 }
 
 main {
@@ -236,6 +269,56 @@ main {
   border-color: rgba(200, 163, 84, 0.35);
 }
 
+.happy-hour-card {
+  position: absolute;
+  top: -8%;
+  right: -10%;
+  width: min(250px, 58%);
+  min-height: 190px;
+  padding: 18px;
+  border-radius: 22px;
+  background:
+    linear-gradient(145deg, rgba(200, 163, 84, 0.18), rgba(12, 31, 27, 0.88) 46%),
+    rgba(12, 31, 27, 0.94);
+  border: 1px solid rgba(200, 163, 84, 0.44);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+  transform: rotate(4deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.happy-hour-card h3 {
+  margin: 0;
+  color: var(--gold);
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: clamp(1.7rem, 4vw, 2.35rem);
+  line-height: 0.95;
+}
+
+.happy-hour-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.happy-hour-card p {
+  margin: 0;
+  color: var(--paper);
+  font-weight: 800;
+  font-size: 1.05rem;
+}
+
+.happy-hour-card strong {
+  margin-top: 6px;
+  color: var(--paper);
+  font-size: 0.96rem;
+  line-height: 1.25;
+}
+
 .feature-card {
   position: absolute;
   left: -6%;
@@ -259,13 +342,23 @@ main {
 
 .feature-card h3 {
   margin: 6px 0 8px;
-  font-size: 1.05rem;
+  color: var(--gold);
+  font-size: 1.55rem;
+  line-height: 1;
 }
 
 .feature-card p {
   margin: 0;
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+.feature-time {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--gold);
+  font-weight: 800;
+  font-size: 0.96rem;
 }
 
 .feature-price {
@@ -273,6 +366,12 @@ main {
   margin-top: 8px;
   font-weight: 700;
   color: var(--gold);
+}
+
+.feature-price-large {
+  font-family: "Playfair Display", "Times New Roman", serif;
+  font-size: 2rem;
+  line-height: 0.95;
 }
 
 .photo-frame {
@@ -1115,6 +1214,13 @@ main {
     display: none;
   }
 
+  .open-status {
+    min-width: auto;
+    max-width: 52vw;
+    padding-inline: 12px;
+    font-size: 0.82rem;
+  }
+
   .menu-grid {
     grid-template-columns: 1fr;
   }
@@ -1170,6 +1276,15 @@ main {
 
   .feature-photo.accent {
     display: none;
+  }
+
+  .happy-hour-card {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    min-height: 0;
+    transform: none;
   }
 
   .feature-card {
@@ -1408,4 +1523,3 @@ main {
     animation: none;
   }
 }
-

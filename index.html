@@ -95,7 +95,7 @@
         <a href="#bewerben">Bewerben</a>
         <a href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Webshop</a>
       </nav>
-      <a class="cta" href="#speisekarte">Tisch reservieren</a>
+      <a class="open-status" href="#besuch" id="open-status" aria-label="Aktueller Öffnungsstatus">Öffnungszeiten</a>
     </header>
 
     <main>
@@ -118,22 +118,21 @@
             <div class="feature-photo main">
               <img
                 src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Gemütliche Café-Szene mit Frühstück"
+                alt="Gemütliche Café-Szene mit Drinks"
                 loading="eager"
               />
             </div>
-            <div class="feature-photo accent">
-              <img
-                src="https://images.unsplash.com/photo-1481391032119-d89fee407e44?auto=format&amp;fit=crop&amp;w=700&amp;q=80"
-                alt="Goldbrauner Kuchen auf einem Teller"
-                loading="lazy"
-              />
+            <div class="happy-hour-card" aria-label="Happy Hour Espresso Martini und Knuthzen für 6 Euro">
+              <div class="happy-hour-heading">
+                <h3>Happy Hour</h3>
+                <span class="feature-price feature-price-large">6€</span>
+              </div>
+              <p>Espresso Martini &amp; Knuthzen</p>
             </div>
             <div class="feature-card">
-              <span class="feature-label">Signature</span>
-              <h3>Knuth Frühstück</h3>
-              <p>Bio-Ei, Avocado, Focaccia und Filterkaffee.</p>
-              <span class="feature-price">9,90 €</span>
+              <h3>Do / Fr</h3>
+              <p>Espresso Martini &amp; Knuthzen</p>
+              <span class="feature-time">18-21 Uhr</span>
             </div>
           </div>
         </div>
@@ -209,7 +208,7 @@
         </div>
       </section>
 
-      <section class="section visit">
+      <section id="besuch" class="section visit">
         <div class="visit-card">
           <div class="visit-map">
             <iframe
@@ -270,6 +269,101 @@
         <a href="https://das-knuth.myshopify.com" target="_blank" rel="noopener">Shop</a>
       </div>
     </footer>
+    <script>
+      (() => {
+        const status = document.getElementById("open-status");
+        if (!status) return;
+
+        const getHamburgDate = () => {
+          const parts = new Intl.DateTimeFormat("en-CA", {
+            timeZone: "Europe/Berlin",
+            year: "numeric",
+            month: "2-digit",
+            day: "2-digit",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+          })
+            .formatToParts(new Date())
+            .reduce((acc, part) => {
+              acc[part.type] = part.value;
+              return acc;
+            }, {});
+
+          const hour = parts.hour === "24" ? "00" : parts.hour;
+          return new Date(`${parts.year}-${parts.month}-${parts.day}T${hour}:${parts.minute}:00`);
+        };
+
+        const schedule = [
+          { open: 9, close: 24 },
+          { open: 9, close: 24 },
+          { open: 9, close: 24 },
+          { open: 9, close: 24 },
+          { open: 9, close: 26 },
+          { open: 9, close: 26 },
+          { open: 10, close: 20 },
+        ];
+
+        const addDays = (date, days) => {
+          const next = new Date(date);
+          next.setDate(next.getDate() + days);
+          return next;
+        };
+
+        const dayStart = (date) => new Date(date.getFullYear(), date.getMonth(), date.getDate());
+        const dayIndex = (date) => (date.getDay() + 6) % 7;
+        const minutesSinceStart = (date) => {
+          const start = dayStart(date);
+          return Math.round((date - start) / 60000);
+        };
+
+        const updateStatus = () => {
+          const now = getHamburgDate();
+          const today = dayIndex(now);
+          const yesterday = (today + 6) % 7;
+          const todayMinutes = minutesSinceStart(now);
+          const yesterdayMinutes = todayMinutes + 1440;
+
+          const openFromYesterday =
+            yesterdayMinutes >= schedule[yesterday].open * 60 &&
+            yesterdayMinutes < schedule[yesterday].close * 60;
+          const openToday =
+            todayMinutes >= schedule[today].open * 60 &&
+            todayMinutes < schedule[today].close * 60;
+
+          status.classList.remove("is-open", "is-closed");
+
+          if (openFromYesterday || openToday) {
+            status.textContent = "Geöffnet";
+            status.classList.add("is-open");
+            status.setAttribute("aria-label", "Cafe Knuth hat aktuell geöffnet");
+            return;
+          }
+
+          let nextOpen = null;
+          for (let offset = 0; offset < 8; offset += 1) {
+            const date = addDays(now, offset);
+            const index = dayIndex(date);
+            const candidate = dayStart(date);
+            candidate.setHours(schedule[index].open, 0, 0, 0);
+            if (candidate > now) {
+              nextOpen = candidate;
+              break;
+            }
+          }
+
+          const openingTime = nextOpen.toLocaleTimeString("de-DE", {
+            hour: "2-digit",
+            minute: "2-digit",
+          });
+          status.textContent = `Öffnet um ${openingTime}`;
+          status.classList.add("is-closed");
+          status.setAttribute("aria-label", `Cafe Knuth öffnet um ${openingTime}`);
+        };
+
+        updateStatus();
+        setInterval(updateStatus, 60000);
+      })();
+    </script>
   </body>
 </html>
-
